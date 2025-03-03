@@ -4,7 +4,17 @@ from django.http import HttpResponse
 
 
 def courses(request):
-    return HttpResponse("This is my courses page")
+    return HttpResponse('''
+                        <h1>This is courses page!</h1>
+                        <a href='/second_app/feedback/'>Feedback</a>
+                        <a href='/first_app/about/'>About</a>
+                        <a href='/first_app/contact/'>Contack</a>
+                        ''')
 
 def feedback(request):
-    return HttpResponse("This is my feedback page")
+    return HttpResponse('''
+                        <h1>This is feedback page!</h1>
+                        <a href='/second_app/courses/'>Courses</a>
+                        <a href='/first_app/about/'>About</a>
+                        <a href='/first_app/contact/'>Contack</a>
+                        ''')
